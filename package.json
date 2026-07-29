@@ -1,23 +1,32 @@
 {
-  "name": "learning-playwright",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "npm run build && npm run start",
-    "test": "playwright test",
-    "test:headed": "playwright test --headed",
-    "test:report": "playwright show-report"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "@playwright/test": "^1.61.1",
-    "@types/node": "^26.1.1",
-    "typescript": "^5.9.2"
-  }
+    "name": "learning-playwright",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "scripts": {
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "typecheck": "tsc -p tsconfig.json",
+        "test": "playwright test",
+        "test:headed": "playwright test --headed",
+        "test:ui": "playwright test --ui",
+        "test:debug": "playwright test --debug",
+        "test:report": "playwright show-report"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "@playwright/test": "^1.61.1",
+        "@types/node": "^26.1.2",
+        "prettier": "^3.6.2",
+        "typescript": "^7.0.2"
+    },
+    "dependencies": {
+        "dotenv": "^17.4.2"
+    },
+    "allowScripts": {
+        "fsevents@2.3.2": true
+    }
 }
