@@ -3,11 +3,11 @@ import { PageManager } from '../pages/PageManager';
 
 export { expect } from '@playwright/test';
 
-type MyFixtures = {
+type TestFixtures = {
     pages: PageManager;
 };
 
-export const test = base.extend<MyFixtures>({
+export const test = base.extend<TestFixtures>({
     pages: async ({ page }, use) => {
         await use(new PageManager(page));
     },

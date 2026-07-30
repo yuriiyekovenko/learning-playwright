@@ -11,15 +11,18 @@
         "test:headed": "playwright test --headed",
         "test:ui": "playwright test --ui",
         "test:debug": "playwright test --debug",
-        "test:report": "playwright show-report"
+        "test:report": "playwright show-report",
+        "allure:report": "allure generate allure-results -o allure-report --clean"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "type": "commonjs",
     "devDependencies": {
-        "@playwright/test": "^1.61.1",
+        "@faker-js/faker": "^10.5.0",
+        "@playwright/test": "^1.62.0",
         "@types/node": "^26.1.2",
+        "allure-playwright": "^3.10.2",
         "prettier": "^3.6.2",
         "typescript": "^7.0.2"
     },
