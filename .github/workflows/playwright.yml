@@ -14,7 +14,6 @@ jobs:
             BASE_URL: https://www.saucedemo.com
             USERNAME: standard_user
             PASSWORD: secret_sauce
-            HOME: /root
         steps:
             - uses: actions/checkout@v6
             - uses: actions/setup-node@v6
@@ -25,6 +24,8 @@ jobs:
               run: npm ci
             - name: Run Playwright tests
               run: npx playwright test
+              env:
+                  HOME: /root
             - uses: actions/upload-artifact@v6
               if: ${{ !cancelled() }}
               with:
